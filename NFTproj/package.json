@@ -1,0 +1,64 @@
+{
+  "name": "nft-card-project",
+  "version": "1.0.0",
+  "description": "NFT名片项目 - 基于以太坊的链上数字身份名片",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "dev": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mumbai": "npx hardhat run scripts/deploy.js --network mumbai",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "test": "npx hardhat test",
+    "node": "npx hardhat node",
+    "verify": "npx hardhat verify",
+    "clean": "npx hardhat clean",
+    "setup": "npm install && cd frontend && npm install",
+    "start:local": "concurrently \"npm run node\" \"sleep 5 && npm run deploy:local\" \"cd frontend && npm start\""
+  },
+  "keywords": [
+    "nft",
+    "blockchain",
+    "ethereum",
+    "solidity",
+    "react",
+    "ipfs",
+    "web3",
+    "digital-identity"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.2.0",
+    "concurrently": "^8.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "typechain": "^8.3.0",
+    "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nft-card-project.git"
+  },
+  "homepage": "https://github.com/yourusername/nft-card-project#readme"
+}
